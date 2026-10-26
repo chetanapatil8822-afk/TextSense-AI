@@ -244,10 +244,10 @@ export const ExperimentsPage = () => {
                 <tr className="hover:bg-slate-50 dark:hover:bg-slate-800/50">
                   <td className="px-6 py-4">TF-IDF + SVM</td>
                   <td className="px-6 py-4">Reddit → Twitter</td>
-                  <td className="px-6 py-4 text-slate-400 italic">Pending</td>
-                  <td className="px-6 py-4 text-slate-400 italic">Pending</td>
-                  <td className="px-6 py-4 text-slate-400 italic">Pending</td>
-                  <td className="px-6 py-4 text-slate-400 italic bg-blue-50/50 dark:bg-blue-900/5">Pending</td>
+                  <td className="px-6 py-4">52.67%</td>
+                  <td className="px-6 py-4">66.85%</td>
+                  <td className="px-6 py-4">54.25%</td>
+                  <td className="px-6 py-4 font-semibold bg-blue-50/50 dark:bg-blue-900/5 text-blue-600 dark:text-blue-400">42.87%</td>
                 </tr>
                 <tr className="hover:bg-slate-50 dark:hover:bg-slate-800/50">
                   <td className="px-6 py-4">mDistilBERT</td>
@@ -370,63 +370,140 @@ export const ExperimentsPage = () => {
         </p>
       </section>
 
-      {/* SECTION 7 — EVALUATION DESIGN */}
-      <section className="space-y-6 pt-6 border-t border-slate-200 dark:border-slate-800">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white">Evaluation Design</h2>
-        
-        <div className="p-8 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-center space-y-4">
-          <div className="px-6 py-3 bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-300 rounded-lg font-bold shadow-sm border border-blue-200 dark:border-blue-800/60 z-10 relative">
-            TWITTER DATA
+      ```jsx
+```jsx
+```jsx
+{/* SECTION 7 — EVALUATION DESIGN */}
+<section className="space-y-3 pt-4 border-t border-slate-200 dark:border-slate-800">
+  <h2 className="text-lg font-bold text-slate-900 dark:text-white">
+    Evaluation Design
+  </h2>
+
+  <div className="w-full rounded-xl border border-slate-200 bg-white p-2 dark:border-slate-800 dark:bg-slate-950 sm:p-3">
+    <div className="mx-auto flex w-full max-w-2xl flex-col items-center">
+
+      {/* 1. DATASET SOURCES */}
+      <div className="w-[78%] rounded-lg border border-blue-300 bg-blue-100/80 px-3 py-2 dark:border-blue-800 dark:bg-blue-950/50">
+        <h3 className="mb-2 text-center text-sm font-extrabold text-slate-900 dark:text-white">
+          1. Dataset Sources
+        </h3>
+        <div className="grid grid-cols-2 gap-2">
+          <div className="rounded-md border border-blue-300 bg-white/80 px-2 py-2 text-center text-xs font-semibold text-slate-800 dark:border-blue-800 dark:bg-slate-900 dark:text-slate-100">
+            Twitter / X
           </div>
-          
-          <div className="w-px h-6 bg-slate-300 dark:bg-slate-700"></div>
-          
-          <div className="w-64 border-t-2 border-slate-300 dark:border-slate-700 border-dashed relative">
-            <div className="absolute top-0 left-0 w-px h-6 bg-slate-300 dark:bg-slate-700"></div>
-            <div className="absolute top-0 right-0 w-px h-6 bg-slate-300 dark:bg-slate-700"></div>
-          </div>
-          
-          <div className="flex w-72 justify-between mt-6">
-            <div className="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-semibold shadow-sm text-slate-700 dark:text-slate-200 z-10">USER-LEVEL</div>
-            <div className="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-semibold shadow-sm text-slate-700 dark:text-slate-200 z-10">TEXT-LEVEL</div>
-          </div>
-          
-          <div className="w-64 border-b-2 border-slate-300 dark:border-slate-700 border-dashed relative mt-4 h-6">
-            <div className="absolute top-0 left-0 w-px h-6 bg-slate-300 dark:bg-slate-700"></div>
-            <div className="absolute top-0 right-0 w-px h-6 bg-slate-300 dark:bg-slate-700"></div>
-          </div>
-          
-          <div className="w-px h-6 bg-slate-300 dark:bg-slate-700"></div>
-          
-          <div className="px-8 py-3 bg-teal-100 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300 rounded-lg font-bold shadow-sm border border-teal-200 dark:border-teal-800/60 z-10">
-            MODEL TRAINING
-          </div>
-          
-          <div className="w-px h-6 bg-slate-300 dark:bg-slate-700"></div>
-          
-          <div className="w-64 border-t-2 border-slate-300 dark:border-slate-700 border-dashed relative">
-            <div className="absolute top-0 left-0 w-px h-6 bg-slate-300 dark:bg-slate-700"></div>
-            <div className="absolute top-0 right-0 w-px h-6 bg-slate-300 dark:bg-slate-700"></div>
-          </div>
-          
-          <div className="flex w-80 justify-between mt-6">
-            <div className="px-4 py-2 bg-slate-200 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-sm font-bold shadow-sm text-slate-800 dark:text-slate-200 z-10">TWITTER TEST</div>
-            <div className="px-4 py-2 bg-slate-200 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-sm font-bold shadow-sm text-slate-800 dark:text-slate-200 z-10">REDDIT TEST</div>
-          </div>
-          
-          <div className="w-64 border-b-2 border-slate-300 dark:border-slate-700 border-dashed relative mt-4 h-6">
-            <div className="absolute top-0 left-0 w-px h-6 bg-slate-300 dark:bg-slate-700"></div>
-            <div className="absolute top-0 right-0 w-px h-6 bg-slate-300 dark:bg-slate-700"></div>
-          </div>
-          
-          <div className="w-px h-6 bg-slate-300 dark:bg-slate-700"></div>
-          
-          <div className="px-6 py-4 bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm text-center z-10 w-full max-w-sm">
-            <div className="font-bold text-slate-800 dark:text-slate-200 mb-2 text-sm tracking-wide">EVALUATION METRICS</div>
-            <div className="text-xs text-slate-600 dark:text-slate-400 font-medium">Accuracy • Precision • Recall • Macro F1</div>
+          <div className="rounded-md border border-blue-300 bg-white/80 px-2 py-2 text-center text-xs font-semibold text-slate-800 dark:border-blue-800 dark:bg-slate-900 dark:text-slate-100">
+            Reddit
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* ARROW */}
+      <div className="flex h-5 flex-col items-center justify-center text-sm leading-none text-slate-600 dark:text-slate-300">
+        <span className="h-2 w-px bg-current" />
+        ▼
+      </div>
+
+      {/* 2. DATA PREPARATION */}
+      <div className="w-full rounded-lg border border-green-300 bg-green-100/80 px-3 py-2 dark:border-green-800 dark:bg-green-950/40">
+        <h3 className="mb-2 text-center text-sm font-extrabold text-slate-900 dark:text-white">
+          2. Data Preparation
+        </h3>
+        <div className="grid grid-cols-3 gap-2">
+          {["Standardization", "Cleaning", "Duplicate Removal"].map((item) => (
+            <div
+              key={item}
+              className="flex min-h-10 items-center justify-center rounded-md border border-green-300 bg-white/80 px-1 py-1.5 text-center text-[10px] font-semibold text-slate-800 dark:border-green-800 dark:bg-slate-900 dark:text-slate-100 sm:text-xs"
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ARROW */}
+      <div className="flex h-5 flex-col items-center justify-center text-sm leading-none text-slate-600 dark:text-slate-300">
+        <span className="h-2 w-px bg-current" />
+        ▼
+      </div>
+
+      {/* 3. MODEL TRAINING */}
+      <div className="w-full rounded-lg border border-dashed border-violet-400 bg-violet-100/70 px-3 py-2 dark:border-violet-700 dark:bg-violet-950/30">
+        <h3 className="mb-2 text-center text-sm font-extrabold text-slate-900 dark:text-white">
+          3. Model Training
+        </h3>
+        <div className="grid grid-cols-3 gap-2">
+          <div className="flex min-h-[58px] flex-col items-center justify-center rounded-md border border-violet-300 bg-white/80 px-1 py-2 text-center dark:border-violet-700 dark:bg-slate-900">
+            <span className="text-xs font-bold text-slate-900 dark:text-white">TF-IDF + LR</span>
+            <span className="mt-1 text-[10px] text-slate-600 dark:text-slate-300">Traditional ML</span>
+          </div>
+          <div className="flex min-h-[58px] flex-col items-center justify-center rounded-md border border-violet-300 bg-white/80 px-1 py-2 text-center dark:border-violet-700 dark:bg-slate-900">
+            <span className="text-xs font-bold text-slate-900 dark:text-white">TF-IDF + SVM</span>
+            <span className="mt-1 text-[10px] text-slate-600 dark:text-slate-300">Traditional ML</span>
+          </div>
+          <div className="flex min-h-[58px] flex-col items-center justify-center rounded-md border border-amber-400 bg-amber-100/80 px-1 py-2 text-center dark:border-amber-700 dark:bg-amber-950/40">
+            <span className="text-xs font-bold text-slate-900 dark:text-white">mDistilBERT</span>
+            <span className="mt-1 text-[10px] text-slate-600 dark:text-slate-300">Transformer</span>
+          </div>
+        </div>
+      </div>
+
+      {/* ARROW */}
+      <div className="flex h-5 flex-col items-center justify-center text-sm leading-none text-slate-600 dark:text-slate-300">
+        <span className="h-2 w-px bg-current" />
+        ▼
+      </div>
+
+      {/* 4. EVALUATION */}
+      <div className="w-full rounded-lg border border-cyan-300 bg-cyan-100/80 px-3 py-2 dark:border-cyan-800 dark:bg-cyan-950/40">
+        <h3 className="mb-2 text-center text-sm font-extrabold text-slate-900 dark:text-white">
+          4. Evaluation
+        </h3>
+        <div className="grid grid-cols-3 gap-2">
+          {[
+            "Within-platform Evaluation",
+            "Cross-platform Evaluation",
+            "Split-strategy Sensitivity",
+          ].map((item) => (
+            <div
+              key={item}
+              className="flex min-h-[48px] items-center justify-center rounded-md border border-cyan-300 bg-white/80 px-1 py-1.5 text-center text-[10px] font-semibold text-slate-800 dark:border-cyan-800 dark:bg-slate-900 dark:text-slate-100 sm:text-xs"
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ARROW */}
+      <div className="flex h-5 flex-col items-center justify-center text-sm leading-none text-slate-600 dark:text-slate-300">
+        <span className="h-2 w-px bg-current" />
+        ▼
+      </div>
+
+      {/* 5. PERFORMANCE METRICS */}
+      <div className="w-full rounded-lg border border-pink-300 bg-pink-100/80 px-3 py-2 dark:border-pink-800 dark:bg-pink-950/40">
+        <h3 className="mb-2 text-center text-sm font-extrabold text-slate-900 dark:text-white">
+          5. Performance Metrics
+        </h3>
+        <div className="grid grid-cols-4 gap-2">
+          {["Accuracy", "Precision", "Recall", "Macro F1"].map((metric) => (
+            <div
+              key={metric}
+              className="flex min-h-9 items-center justify-center rounded-md border border-pink-300 bg-white/80 px-1 py-1.5 text-center text-[10px] font-semibold text-slate-800 dark:border-pink-800 dark:bg-slate-900 dark:text-slate-100 sm:text-xs"
+            >
+              {metric}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <p className="mt-2 text-center text-[10px] italic text-slate-500 dark:text-slate-400">
+        Research workflow for cross-platform depression detection in social media text.
+      </p>
+
+    </div>
+  </div>
+</section>
 
       {/* SECTION 8 — EXPERIMENTAL NOTES */}
       <section className="space-y-4 pt-6 border-t border-slate-200 dark:border-slate-800">

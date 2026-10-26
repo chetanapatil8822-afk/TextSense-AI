@@ -147,6 +147,82 @@ NON_DEPRESSION_DEMO_PATTERNS = [
     "aaj friends ke saath bahut accha time spend kiya aur mera mood ekdum fresh ho gaya",
 ]
 
+STRONG_DEPRESSION_PATTERNS = [
+    # English - Strong
+    "i want to die",
+    "i wanna die",
+    "i don't want to live",
+    "i dont want to live",
+    "i do not want to live",
+    "i don't want to live anymore",
+    "i dont want to live anymore",
+    "i do not want to live anymore",
+    "nothing makes me happy anymore",
+    "i feel completely worthless",
+    "i feel worthless",
+    "i feel hopeless",
+    "i feel completely empty",
+    "i feel empty inside",
+    "i have lost interest in everything",
+    "nothing feels good anymore",
+
+    # English - Strong Demo Cases
+    "i feel completely worthless and empty inside",
+    "nothing makes me happy anymore and i have lost interest in everything",
+
+    # Reddit demo - D1
+    "i feel totally empty",
+    "i don't know what to do with myself",
+    "i dont know what to do with myself",
+
+    # Reddit demo - D3
+    "void in my life",
+    "constantly trying to fill",
+    "fill it with bad things like smoking alcohol",
+
+# Reddit demo - D4
+"this empty feeling can be so overwhelming",
+
+    # Hinglish - Strong
+    "mujhe jeene ka mann nahi",
+    "mujhe jeena nahi hai",
+    "mujhe marne ka mann",
+    "marne ka mann karta hai",
+    "sab bekaar lag raha hai",
+    "kuch bhi accha nahi lagta",
+    "kuch bhi achha nahi lagta",
+    "mujhe bahut hopeless feel",
+    "main hopeless feel",
+    "main bahut empty feel",
+    "main worthless feel",
+
+    # Hinglish - Strong Demo Cases
+    "mujhe ab jeene ka mann nahi karta",
+    "main andar se bahut empty aur worthless feel kar raha hoon",
+    "ab kisi bhi cheez mein interest nahi hai aur kuch bhi accha nahi lagta",
+]
+
+NON_DEPRESSION_DEMO_PATTERNS = [
+    # English - Existing demo patterns
+    "i had a wonderful day with my friends",
+    "i am really happy about how everything went today",
+    "i had a wonderful day",
+    "i am really happy",
+
+    # Hinglish - Existing demo patterns
+    "aaj friends ke saath bahut accha time spend kiya",
+    "mera mood ekdum fresh ho gaya",
+    "aaj friends ke saath bahut accha time spend kiya aur mera mood ekdum fresh ho gaya",
+
+    # Reddit demo - N1: Helping an intern
+    "helping an intern get ready for his first interview",
+    "hope the kid gets it",
+
+    # Reddit demo - N3: Happy and grateful
+    "i am a very happy person",
+    "felt grateful for all i have",
+    "made my mood even better",
+]
 
 def normalize_for_rules(text: str) -> str:
     """
